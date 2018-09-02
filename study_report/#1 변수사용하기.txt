@@ -1,0 +1,2 @@
+season = '여름'
+print('지금은', season, ' 입니다.')

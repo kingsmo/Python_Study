@@ -1,0 +1,52 @@
+1. 야근지수 & 팰린드롬
+알고리즘은 정상 작동하지만 시간 초과이다.
+하지만 줄일 방법을 찾지 못하였다ㅠ..
+계속 생각해봐야 할듯
+
+2. 2 * N 타일링 & 멀리뛰기
+점화식 아닌 피보나치 수열 쓰면 된다
+
+3. 하노이의 탑
+단순 계산이 아니라 과정을 출력해야 한다.
+점화식을 완벽하게 알아야한다.
+answer = [[]]
+
+def solution(n):
+    tower(n, 1, 3, 2)
+    del answer[0]
+    return answer
+
+def tower(n, fro, to, tmp):
+    if n > 1 :
+        tower(n-1, fro, tmp, to)
+        answer.append([fro, to])
+        tower(n-1, tmp, to, fro)
+    else :
+        answer.append([fro, to])
+
+4. 최고의 집합
+아이디어가 중요한 거였다.
+최고의 집합은 중간값에서 나오므로 몫과 나머지를 활용하여 1씩더해가며 계산하면된다.
+
+def solution(n, s):
+
+    if n > s:
+        return [-1]
+
+    answer = []
+
+    #몫을 일단 초기값으로 놔둔다
+    for i in range(n):
+        answer.append(s//n)
+    # 나머지만큼 남은값에 더해줘야 한다.
+    addingNumber = s%n
+    while addingNumber>0:
+        for i in range(n):
+            if addingNumber>0:
+                answer[i]+=1
+                addingNumber -= 1
+            else:
+                break
+    return sorted(answer)
+
+

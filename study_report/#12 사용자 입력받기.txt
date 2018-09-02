@@ -1,0 +1,13 @@
+input()
+사용자의 키보드 입력을 return
+
+print('가위 바위 보 중 하나를 내주세요> ', end = ' ')
+mine = input()
+print('mine:', mine)
+간단한 print기능을 내장
+
+mine = input('가위 바위 보 중 하나를 내주세요> ')
+print('mine:', mine)
+Ctrl + c
+프로그램 즉시 종료
+

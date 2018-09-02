@@ -1,0 +1,31 @@
+자료형
+type( a ) # type( 변수명 ) : 자료형
+isinstance( 42, int ) # isinstance( 값, 자료형 ) : 자료형 검사
+
+클래스
+함수나 변수들을 모아 놓은 집합체
+인스턴스
+클래스에 의해 생성된 객체
+인스턴스 각자 자신의 값을 가지고 있다.
+
+같은 type인지 확인하는 법
+if list1 is list2	
+
+class Human( ):
+    '''인간'''
+    def create( name, weight ): # 다음 강의에서 자세히 설명
+        person = Human()
+        person.name = name
+        person.weight = weight
+        return person
+
+    def eat( self ):
+        self.weight += 0.1
+        print("{}가 먹어서 {}kg이 되었습니다".format(self.name, self.weight))
+
+    def walk( self ):
+        self.weight -= 0.1
+        print("{}가 걸어서 {}kg이 되었습니다".format(self.name, self.weight))
+
+person = Human.create("철수", 60.5)
+person.eat()

@@ -1,0 +1,13 @@
+datetime 모듈
+날짜와 시간을 사용하게 해주는 라이브러리
+start_time = datetime.datetime.now()
+start_time = datetime.datetime(2016. 2. 1)
+start_time = start_time.replace(year= 2017, month = 2, day =1)
+how_long = start_time - datetime.datetime.now()
+how_long.days
+how_long.seconds
+
+timedelta 클래스
+시간의 연산을 가능하게 해주는 클래스
+hundred_bofore = datetime.timedelta(days = -100)
+hundred_after = datetime.datetime.now().replace(hour = 9, minute = 0, second = 0) + datetime.timedelta(days = 100)
