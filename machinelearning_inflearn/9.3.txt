@@ -1,0 +1,17 @@
+문제를 마주쳤을 때 어떤 모델을 사용할 것인가에 초점을 맞추자!
+
+knn
+  군집분류
+  N 개의 군집으로 나눠질 때 K는 N 의 배수가 되어선 안된다.
+decision tree
+  entropy가 낮을수록 information gain이 높을 수록 좋은 decision tree이다.
+나이브 베이즈(Naive Bayes) 분류
+  없음
+linear regression
+
+케글 타이타닉
+데이터 셋 먼저 확인
+데이터 중에서 생존과 상관있을 것 같은 것만 뽑아보기
+ipynb파일에다가 코멘트 너가며 디버깅했음
+
+	
