@@ -1,0 +1,81 @@
+1. 목표 정의
+    목표 : 어떤사람이 살고 어떤 사람이 죽을지 예측하는 것
+
+
+2. 데이터 수집
+    타이타닉같은 경우 csv 파일로 존재
+
+
+3.  탐구 데이터 분석(eda)
+    pandas를 활용 데이터를 쉽고 조작하고 시각화히기 위해
+    .head() : 데이터를 기본적으로 5개의 row만 보여주는 pandas 함수
+    데이터 사전 : 데이터 name, value 설명
+    Feature engineering 다음에 다룸
+    train데이터를 통해서 머신러닝 예측시스템을 만들고 test데이터를 넣어야 하기 때문에 survive 정보가 없음
+    .shape : row개수, column개수
+    .info : 정보 확인 가능, age나 cabin같은 경우 null값이 있다.
+    train.innull().sum() : null case 개수 손쉽게 알 수 있음
+    seeborn을 쓸 예정
+    bar_chart라는 함수를 설정하여 특징마다 얼마나 살아남았는지 확인 할 수 있다.
+    이 함수의 데이터를 통해서 가설을 세울 수 있다. ex) 여자는 남자보다 살 확률이 높다.
+    
+    
+4. Feature engineering(특징 뽑기)
+    classfier를 numeric으로 작동하기 때문에 텍스트 변수들을 전부 숫자로 변환시켜 줄 것이다.
+    없는 변수들을 가장 알맞은 변수로 설저앻줄 예정
+    name같은 경우는 많은 정보를 지니고 있지않지만, title같은 경우는 mr, miss, mrs로 의미있는 데이터가 만들어질 수도 있음 (정규식을 통해 빼냄)
+    age는 평균나이로 퉁치는 것보다는 title과 결합하여 mr mrs miss의 평균나이로 적기
+    1 ~ 80 까지있는데 binning을 해주자. sequential한 데이터를 그룹화 시켜주는것이다.
+    embarked는 pclass와 연계해서 생각해보자
+    fare도 binning하여.xlim을 통해 제한 걸어 볼 수 있음 
+    cabin은 피처 스케일링을 통해 소수점으로 구분한다. 남자 여자같은 경우 1차이인데 이게 10차이 나버리면 남자 여자의 차이보다 cabin의 차이를 더 크게 느낌
+    sibsp와 parch를 합쳐 family size라는 feature로 만들어줌
+    모든 feature들이 숫자로만 구성된 벡터를 갖고있으면 machine learning classfier를 이용해 prediction할 수 있음!!
+  
+  
+5. 모델링
+    classfier -> class validation -> kaggle 제출
+    knn : k에 따라 예측이 달라질 수 있다. k에 따른 accuracy를 측정해보는것도 좋은공부
+    decision tree : feature들을 분석하여 tree를 빌드하자
+    random forest : 여러개의 짧은 decision tree가 안에 있다.
+    naive bayes : 확률을 계산!
+    svm(support vector machine) : decision boundary기준으로 위는 살고 아래는 죽는다.
+    
+    class validation을 어떻게 할 것이냐?
+    891개의 케이스가 있는데 800개는 테스트 91개는 vaild로 쓰자. 91개를 무엇으로 잡느냐에 따라 accuracy가 너무다름
+    그래서 k-fold cross validation이 나옴 전부다 accuracy계산해서 평균을 내는 것
+    여러 classfier쓰는데 가장 accurany가 높은 것을 쓰는 게 알맞다.
+    
+    사이킷런을 불러와 각각의 classfier를  cross validation 후에 accurany가 제일 높은 classfier를 사용
+    dataframe 잡고 .csv파일로 아웃풋하기
+    
+    
+
+오버피팅(overfitting) 
+    스키니진 슈퍼모델에만 맞추면 안됨 -> 다양한 체형에 맡겨야함
+    다양한 체형을 생각못하고 슈퍼모델에만 맞추는 것을 overfitting이라고 할 수 있음
+    슈퍼모델 = 우리가 가지고 있는 데이터, 일반 고객들 = 아직 보이지 않는 데이터
+    classfier가 제대로 작동 안될경우 overfitting이라고 한다
+    공을 가르치는 경우 round shape만 가르치면 달도 공이라고 한다. - 너무 bias하게 트레이닝 된 모델이다. underfitting
+    조건을 더 추가해준다 먹지못하는것이나, 게임할 수 있다 등..
+    그런데 여기다 실밥 유무, 크기가 작은것들을 추가해버리면 골프공이나 탁구공을 포함하지 못한다. 이것이 overfitting
+    bias and variance
+    bias는 실제값에서 얼마나 멀어져 있는가
+    variance 실제값들이 서로 얼마나 떨어져 있는가
+    low bias and low variance가 목표다!
+    underfitting 극복하는 법
+    1. feature를 더 찾아 넣기 ex) 실밥, 크기
+    2. 모델을 바꿈으로써 결과 다른 것을 분석
+    overfitting 극복하는 법
+    1. validation 후 accuracy 값이 train set의 accracy보다 낮게되면 오버피팅 되어있음을 알 수 있음 주로 쓰는 것음 k-fold system이다
+    train 과정을 바꾸면서 accuracy를 늘리면 된다. 
+    reqularization - regression(회귀) : variance를 낮춰야한다
+    복잡했던 선을 완만하게 만들었다. 람다 값이 있어야 완만한 선 너무높으면 underfitting
+    2. early stopping(deep-learning)
+    계속해서 학습 시켜주면 train accuracy는 올라가게 되지만 valid accracy
+    reqularization, cross validation, add more data as much as possible
+    2-2 drop-out 
+    트레인 과정에서 몇개의 뉴런을 쉬게 하는 것
+    서브 그룹들이 각각의 트레인별로 학습이 되었으니까
+    모든 뉴런을 학습시킨 것이 아니니까 variance가 낮아짐
+    적은 variance로 서로 도와주고 뉴런이 몇개 없으니 overfitting에서 멀어지는 효과
