@@ -1,0 +1,19 @@
+컨퓨전 매트릭스를 보고 어느 모델을 선택해야 하냐
+
+tp 제대로 찾은것
+tn 거절해야될것을 잘 거절
+fp 잘못예측한값 column에서 뺌
+fn 에이를 잘못예측 row에서 뺌
+
+accracy
+    tp / 전체개수
+    데이터 밸런스가 좋을 때 일수록 더좋음  a b c d 전부 동일한 테스트 개수로
+    
+f1score 
+    데이터가 밸런스하지 않을때 잘 동작한다.
+    조화평균 harmonic mean을 이용하기 때문이다.
+    
+    각 precsion = tp / (tp + fp)
+    recall = tp / (to + fn)
+    모든 precision, recall 평균 내주기
+    f1 score = 2 * precosion * recall / precision + recall
