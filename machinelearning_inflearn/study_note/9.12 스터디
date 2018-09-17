@@ -1,0 +1,22 @@
+판다스가 따로 자료형들이 있다.  ex) series, 
+
+cross validation
+overfitting이 이루어지기 때문에 validation 셋을 바꿔가면서 검증함
+요즘은 20퍼센트 정도를 완전히 떼어논 후 마지막 테스트에만 포함함.
+
+테스트케이스에 대해서
+램덤이 되게 중요 그다음 샘플링을 하면서 비율을 맞춰줌 !! 자살률 관련하면 9999명 삼 1명자살이 데이터면 acurracy가 99퍼가 나온다.. 그래서 테스트셋이 중요하다.
+accuracy가 마냥 높다고 좋은 모델이 아니다.
+
+회귀(regression) : 실수값이 나옴 ex) 50kg, 각각의 값에 대해서 순차적인 연관성이 있음 
+분류(classfier) : 종류문제 ex) 동물의 종류, 비만 그룹, 수치적으로 연관성이 없음, 죽는거 0 사는거 1 값이 의미가없음
+
+support vector classfier
+
+fit 하면 학습하는 것 (train_x, train_y)
+train_x : train_x로 학습함
+train_y : survived되는 특성
+
+one-hot-encoding - column을 여러개로 나눈다.
+성별같은경우 010101010 로하면안된다. 숫자의개념이 아니라 male과 female 컬럼을 만들어서 1이 하나만 나오게 해야됨
+column을 개수만큼 나눠라 만약에 0, 1, 2 ,3 이런식으로 인덱싱 하면결과와의 correlation값이 이상해진다.
