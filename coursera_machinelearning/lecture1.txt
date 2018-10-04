@@ -1,0 +1,50 @@
+학습 알고리즘을  인간의 뇌와 가장 비슷하게 만드는 것이 목표
+web click data, medical records. biology, engineering
+nlp, computer vision,self customizing,
+
+기계학습 정의
+
+1. arthur samuel
+  컴퓨터에게 학습할 능력을 주는 학문 분야
+  the field of study that gives computers the ability to learn without being explicitly programmed
+
+2.tom mitchell
+  어떤 경험이 e 어떤 수행이 t 퍼포먼스 p
+  과제 t에 대해 경험 e로부터 성능 기준 p에 따라 학습한다.
+  t : 체스 p : 체스게임
+
+지도학습(supervised learning)
+자율학습(unsupervised learning)
+강화 reinforce machine learning
+recommender systems
+
+
+supervised learning
+  주택평수로 가격예측
+  우리가 알고리즘에게 정확한 답을 알고있는 데이터 셋을 준다는 것을 뜻함.
+  regression problem이라고도 부림
+  연속적인 속성값을 예측하는데 필요
+  실수(float)!
+
+  종양의 크기와 악성 종양이냐 아니냐의 관계
+  classfication 이산적인 문제를 예측하는 것
+  원인이 2가지가 아닐 수도 있다. - 연령, 종양의 크기
+  다른 머신러닝 문제는 여러 feature들을 가질것이다.
+
+
+unsupervised learning
+  label이 주어지지않음, 클러스터링 알고리즘
+  데이터 자체만 제공하는 것
+  기계적으로 유형 분류!
+  organize computing clusters
+  social nework analysis
+  market segmentation
+  astronomical data analysis
+  칵테일 파티 문제
+  여러명의 사람과 여러개의 마이크
+  소리를 합치거나 분리하기
+  octave, prototyping 를 이용해라 오픈소스 라이브라러리로 한번에 해결가능
+
+
+
+4번 문제 해석이...
