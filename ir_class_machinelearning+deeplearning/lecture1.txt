@@ -1,0 +1,61 @@
+머신러닝의 용어와 개념 설명
+
+1
+수업할 것 설명
+
+2
+머신러닝 설명
+explicit programming - 정확하게!는 제약이 있다.
+스팸필터같은 경우는 규칙들이 너무 많다.
+자율주행도 너무 많음!
+
+컴퓨터가  학습해서 배우는 능력을 가지는 것을 머신러닝이라고 함
+
+3
+supervised/unsupervised learning
+supervised는 정해진 데이터다 - training set
+
+4
+supervised 예를 들면, 개 고양이, 컵 사진 구분
+정답을 알려주고 학습을 시켜서 supervised
+
+5
+unsupervised learning
+정답이 없이 스스로 학습!
+예로는 구글 뉴스 그룹화, 단어 그룹화
+
+6
+supervised learning
+- image labeling
+- email spam filter
+- predicting exam score
+
+7
+training data set
+x와 y가 있는데 여러개의 x중에서 정답 y가 있다.
+이 데이터를 토대로 기계학습을 시킨다.
+이 데이터가 트레이닝 데이터 셋이다.
+
+8
+알파고
+기존에 사람들이 바둑을 둔 것을 학습을 함!
+기존에 사람들이 바둑을 둔 것 = training data set
+이 경우도 supervised
+
+9
+슈퍼바이즈드 러닝의 여러 유형
+시험점수 예측 : 시험점수(0 ~ 100)이면 regression
+pass/non-pass 예측 : classfication 분류하는 것(binary)
+grade(A, B, C) 예측 : mulit-label classfication
+
+10
+시험점수를 알려면 트레이닝 데이터가 필요함
+여기서는 공부시간으로 score를 예측
+x = 공부시간, y = 점수 regression
+
+11
+classfication
+x = 공부시간, y = pass/nonpass binary classfication
+
+12
+x = 공부시간, y = grade multi-label classfication

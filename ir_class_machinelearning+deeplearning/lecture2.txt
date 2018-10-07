@@ -1,0 +1,39 @@
+linear regression
+
+1
+점수 예측
+train하는 것
+어떻게 동작하는지 어떻게 만드는지 설명
+2
+x는 feature라고 부름
+y는 결과값
+3
+x,y 좌표찍기
+4
+가정 hypothesis
+실생활에서 적용되는 경우 많음 ex) 집크기 가격, 공부시간 성적 등
+하나의 선으로 표현되는 경우가 regression
+5
+H(x) = Wx + b
+하나의 선이 될거라고 가설을 세움
+6
+어떤 선이 가장 잘 맞는 선일까
+예시같은 경우는
+H(x) = 1x + 0
+w 와 b를 예측해야함
+7
+어느 가설이 더 좋을까
+선과 실제 데이터(점)과의 거리로
+8
+이것을 cost function(loss)이라고 부름
+H(x) - y는 음수일수도 있어서 제곱을함
+(H(x) - y)^2 disance니까
+
+cost function 식 알고 있기
+m = 데이터 갯수
+9
+이 cost function이 제일 작게 하는 것이
+linear regression의 학습
+10
+minimize cost(W, b)
+하는 여러 알고리즘들이 있다.
