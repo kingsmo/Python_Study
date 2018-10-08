@@ -1,0 +1,37 @@
+Logistic(regression) classfication
+1
+regression복슴
+hypothesis
+cost
+gradient descesnt
+2
+classfication
+처음에는 binary배울거임
+에를 들어, spam detection, facebook feed
+credit card fraudulent transaction detection: legitimate/fraud
+3
+0, 1로 encoding
+4
+radiology
+5
+주식시장에서도 사용
+study hours -> pass(1) / fail(0)
+6
+linear regression처럼 일정값 이하면 fail
+이상이면 pass
+그런데 공부시간이 엄청 큰 x가 들어오면 기울기값이 크게 변한다
+7
+또, y가 0 또는 1인데
+hypothesis는 0과 1사이의 값이 아닌 정답을 줄 수 있다.
+8
+logistic hypothesis를
+0~1사이로 만들어 줘야하는 것이 필요하다!
+9
+sigmoid - s자함수
+g(z)는 아무리 커도 1보다 작고 아무리 작아도 0보다 크다.
+z = WX
+H(x) = g(z)
+이렇게 두면 된다
+10
+h(x) =       1
+        1 + e-(wtx)
