@@ -1,0 +1,29 @@
+multinomial classfication
+
+1
+logistic regression은
+g(z)가 큰 값을 0 ~ 1사이의 값으로 매핑해서
+g(z) = sigmoid, logistic 두가지로 불린다.
+
+2
+logistic classfication을 학습시킨다는 것은
+구분하는 선을 긋는것이다!
+
+3
+이 아이디어를 그대로 multinomial에 적용가능하다.
+
+4
+3가지 경우(a, b, c)가 있는데
+c or not c
+b or not b
+a or bot b
+이렇게 한 선을 여러개 그어준다.
+
+5
+모든 경우를 true / false로 구분하는 것이다.
+예시의 같은경우 3가지가 있는데 독립된 3가지 예측 결과가 나와야 한다.
+우리는 계산하기 편하기 위해 매트릭스와 벡터의 곱을 표현한다
+
+6
+그러면 우리가 원하는 독립된 3가지 예측 결과가 나온다
+이 값에 sigmoid를 적용해야 하는데 간단하게 하는 법은 다음시간에~

@@ -1,0 +1,40 @@
+multinomial classfication
+sigmoid를 적용해야 하는데 간단하게 하는 법 - softmax
+
+
+1
+우리가 logistic classifier를 주어서 결과를 벡터로 표현되는데
+이 값들을 전체 더하면 1이되고 값이 0 ~ 1사이에 머무르게 해야한다.
+
+2
+softmax 함수
+결과 값을 0 과 1사이로 매핑해주고 전부 더하면 1이되는 함수이다.
+one hot encoding은
+실제로 한가지만 원할 때 제일 큰 값은 1로 하고 나머지를 0으로 한다.
+argmax이다.
+
+3
+cost function
+cross-entropy 함수를 씀
+D(S, L) = -시그마 L * log(S)
+S는 예측값 L은 실제값
+
+4
+위 cost function을 계산하면
+예측이 실제와 맞을경우 전부 더하면 cost값이 0이 됨
+예측이 실제와 틀릴경우 무한대가 나온다.
+실제의 값이 반대의 경우도 마찬가지
+
+5
+logistic cost 사실상 이것이 cross entropy
+왜 같은지 생각해봐라
+답 :
+logistic cost function에서 
+y를 p1, H(x)를 q1, y-1을 p2, 1-H(x)를 q2로치환하면
+cross entropy의 식이 나온다.
+
+6
+cost function의
+마지막 단계는 gradient descent를 활용하는 것이다!
+
+많은 양의 training data가 있을경우

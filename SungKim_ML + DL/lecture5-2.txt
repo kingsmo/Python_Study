@@ -1,4 +1,5 @@
 Logistic regression cost함수 설명
+
 1
 cost function
 가설이 조금 바뀜 0 ~ 1사이로
@@ -9,9 +10,13 @@ cost function
 각 최소점은 local minimum 전체의 최저점은 global minimum
 우리는 global minium을 찾아야하는데
 gradient descent를 쓸 수 없음
+
 2
 새로운 cost function이 필요
+
 3
+cost 함수의 의미가 우리가 예측한 값과 실제의 값이 같으면 cost값은 작아지고
+예측이 틀리면 cost가 커짐
 y = 1일 때
 cost = g(z) = -log(z)
 H(x) = 1 -> cost(1) = 0
@@ -22,9 +27,11 @@ H(x) = 0 -> cost(0) = 0
 H(x) = 1 -> cost(2) = 무한대
 
 이 두 개를 하치면 매끈한 밥그릇 모양이 나옴
+
 4
 두가지 경우를 합친 수식이 존재
 C(H(x), y) = -ylog(H(x)) - (1 - y)log(1 - H(x))
+
 5
 minimize cost는 똑같이
 cost 함수만 바뀐것

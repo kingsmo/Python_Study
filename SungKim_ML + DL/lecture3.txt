@@ -2,28 +2,35 @@ linear regression cost최소화
 1
 hypothesis
 cost 다시설명
+
 2
 simplified hypothesis
 b를 없애고 H(x) = W(x)
 cost 함수에서도 b가 다 사라짐
+
 3
 예시
 w = 1이면 cost(W) = 0
 w = 0이면,2일때 계산하기!
+
 4
 cost graph로 그리기
 2차원 그래프 됨
+
 5
 기계적으로 이 점을 어케 찾냐
+
 6
 gradient decscent algorithm
 기울기 하강 알고리즘
 cost function을 최소화함
 많은 값들이 있는 경우에도 알고리즘 적용 가능하다.
+
 7
 어떻게 작동하는지
 산에서 가장 빨리 내려오는 경우 - 경사가 급한곳으로
 기울기 하강 알고리즘도 똑같음
+
 8
 아무점에서 시작할 수 있음
 W를 조금 바꾼다음에 cost를 줄인다
@@ -31,20 +38,25 @@ W를 조금 바꾼다음에 cost를 줄인다
 경사도는 어떻게 구하냐? 미분!
 1/2m 해주기 별차이없음
 함수설명
+
 9
 formal definition
 W := W - a * a / aW * cost(W)
 이 식의 의미는 W를 점점 최저점으로 움직인다는거
 a는 running rate
+
 10
 formal definition이어서
 마지막 식
 미분 걱정 ㄴㄴ 알아서 해줌
+
 11
 gradient decscent algorithm의 최종 식
+
 12
 convex function
 시작 점에따라 cost가 달라짐
+
 13
 w, b, cost(W, b)가 세축으로 한
 convex function
