@@ -29,7 +29,7 @@ S는 예측값 L은 실제값
 logistic cost 사실상 이것이 cross entropy
 왜 같은지 생각해봐라
 답 :
-logistic cost function에서 
+logistic cost function에서
 y를 p1, H(x)를 q1, y-1을 p2, 1-H(x)를 q2로치환하면
 cross entropy의 식이 나온다.
 

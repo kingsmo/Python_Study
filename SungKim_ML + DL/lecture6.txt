@@ -16,7 +16,7 @@ logistic classfication을 학습시킨다는 것은
 3가지 경우(a, b, c)가 있는데
 c or not c
 b or not b
-a or bot b
+a or not a
 이렇게 한 선을 여러개 그어준다.
 
 5
