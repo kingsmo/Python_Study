@@ -1,0 +1,27 @@
+naive bayes classifier - 2
+
+P(Y=y)는 k - 1개만 있으면 된다.
+P(X=x|Y=y) (2^d - 1)k가 된다. 너무 큰 숫자임
+
+많은 데이터셋이 필요한데 사실상 얻기 힘듬
+P(X=x|Y=y) 이것을 줄여야하는데 d를 줄일 수는 없음
+
+그래서 conditional independence를 가정함
+P(x, y) = P(x)P(y) 두개의 곱셈으로 쪼갬
+2의 자승으로 올라가는 현상을 없앨 수 있음
+각 피쳐들끼리는 high correlation이 있을 수 있음
+하지만 이것을 다 고려하기에는 계산할 파라미터가 많아져서
+naive하게 conditional independence를 억지로 가정한 것이
+naive bayes
+P(x1|x2, y) = P(x1|y)
+P(x1, x2| y) = P(x1|y)P(x2|y)
+
+conditional vs marginal
+커맨더가 한쪽에만 명령을 내렸는데 밑에 있는 사람들끼리 서로 영향을 가지는 경우와 안가지는 경우
+P(X) = P(X|Y)
+커맨더의 명령을 모를경우 B가 이동하는 것에 따라 A가 이동하게 되므로
+marginal independence하다고 말할 수 있음
+marginal independent는 x1, x2간의 관계가 정의되지 않음
+
+latent variable 정보만이 나의 행동에 영향을 끼치는 것을 기반으로
+x1, x2를 구분해주는 클래스파이어다

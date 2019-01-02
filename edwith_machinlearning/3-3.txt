@@ -1,0 +1,22 @@
+naive bayes classifier - 3
+
+P(X = x)복잡한 joint 부분이였다.
+P(X=x|Y=y) 는 (2^d - 1)k cases이다.
+만약에
+P(Xt = Xi|Y=y) (2 - 1)dk cases이다
+
+prior P(Y)가 주어직ㅎ
+d개의 independence한 features X가 주어짐
+P(Xi|Y)라는 likelihood를 가짐
+
+나이브베이즈는 옵티멀 클래스파이어
+
+만들기 아주 쉬움
+문제점은
+1. naive assumption이 현실에서 통용되지않음
+2. incorrect probability estimations
+mle보단 map를 활용해야함
+관측되지 않은 내용을 예측을 못하기 때문에
+사전정보라도 주어서 예측을 해야함
+
+다음에는 naive assumption을 없애도록하는 로지스틱리그레션을 할 예정

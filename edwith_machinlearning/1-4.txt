@@ -1,0 +1,56 @@
+Basics
+
+기존 지식에 대한 파라미터를 알아보는 과정
+결국 mle map 전부 확률을 알아본 것임
+
+probability
+mle map로 알아본 것이지만 확률에 대한 정의가 필요
+e1 e2라는 사건이 발생
+이 사건이 발생할 확률을 정의해 보자!
+P(E) >= 0, P(omega) = 1 (모든 경우의 확률)
+
+a : 딸 낳을 확률
+b : 자녀를 낳을 확률
+P(a) <= P(b), P(공집합) = 0, 0<= P(E) <= 1
+P(A U B) = P(A) + P(B) - P(A ^ B)
+P(Ec) = 1 - P(E)
+
+
+조건부 확률(conditional probability)
+scope = condition
+우리는 오메가만 다루지 않는다.
+P(A|B) = P(A^B)
+          P(B)
+B라는 스코프 내부에서 A가 발생할 부분에 대해서 따져보는 수식이다.
+많이 쓰이는 수식 두개
+P(B|A) = P(A|B)P(B)
+            P(A)
+P(A) = 시그마P(A|Bn)P(Bn)
+
+
+probability distribution
+어떤 이벤트가 발생하는 것을 assign, mapping해주는 것이다.
+f(x) 식이 있다.
+probability density function = f(x)
+cumulative distribution function은 pdf를 쌓은 것에 불과 (0 ~ 1)
+
+
+파라미터를 바꾸거나 공식을 바꿔서 그래프 모양을 바꿀 수 있다.
+공식을 바꾸는 normal distribution은
+그 중에서 formula가 있는데,
+mean과 variance 파라미터를 이용함
+끝부분이 아주길게 가는 long tail이 존재
+
+beta distribution은 0과 1범위안에서 끝난다.
+어떤 범위가 딱 떨어질때는 beta distribution을 쓰는 것이 좋다. 확률!!
+알파 베타 파라미터
+
+binomial distribution은
+p, n 파라미터
+선이아니라 점으로 이어짐
+discrete한 확률을 정의할 때 하는 것이다. 겜블링 할 때
+1.5 이런 수가 안나온다.
+
+multinomial distribution
+binomial처럼 2가지 경우(앞, 뒤)가 아닌 여러 경우면 multinomial이다.
+예를 들어, '아'라는 단어가 나온 뒤에 어떤 단어가 나올지

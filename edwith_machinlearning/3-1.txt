@@ -1,0 +1,36 @@
+naive bayes classifier
+
+optimail classification
+hit or miss
+ranking
+types 등을 분류하는 것
+value prediction = regression
+
+bayes classfier
+f스타 = argmin P(f(X) != Y)
+Y햇이 Y와 다를 확률이 최소하 시키는 f스타펑션을 구해라
+f스타(x) = argmax y =y P(y=y|x=x)
+x가 주어지 상황에서 확률분포 확률밀도함수를 조정해서 만들어줘라
+
+mle, map를 활용해서 더 좋은 classfier만들기
+실선이 점선(선형)보다 좋다,
+점선 같은 경우는 차이가 크지 않음
+실선 같은 경우는 두 확률 차이가 큼
+높은 확률차이로 클래스 구분을 쉽게 해줌
+왼쪽 기준으로 빨간색 밑에는 에러일 확률이 된다.
+이것 또한 실선이 더 에러 확률이 적다.
+
+옵티멀하다는거는 이러한 에러일 확률을 최소화시키는 것이다.
+주어진 데이터만 가지고 주어진 그래프 같은 커브를 만드는 것
+직선이 되든 곡선이 되든 커브를 만들기
+커브 모양은 다음주
+
+P(Y=Y|X=x) => P(X=x|Y=y)P(Y=y)
+          class conditional density / class prior
+                likelihood
+클래스 파이어 형태로 변환함
+
+data set으로부터 확률을 구할 수 있음
+
+여러 variable간의 interaction이 있음 이것들을 다 combination해야함
+naive bayes가 이 interaction을 무시하는

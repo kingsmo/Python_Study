@@ -1,0 +1,57 @@
+머신러닝 이론 개요
+
+머신러닝의 정의
+컴퓨터가 경험으로부터 배우는 것
+특정 태스크(e)를 수행하는 데 점점 퍼포먼스(p)가 잘 나온다.
+더 많은 경험 -> 더 많은 지식과 성능
+
+
+rule_based
+완벽한 세상 : 1. 관측 에러는 없음
+            2. 일관적이지 않은 관측은 없음(완벽), 랜덤이펙트가 없음
+            3. 주어진 정보가 task를 완벽하게 설명할 수 있음
+경험 : sky, temp, humid, wind, water, forest
+특정한 태스크(t) : 놀 수 있다, 없다
+어떤 팩터가 가장 영향을 끼치는지 알아볼 것이다.
+function approximation
+instance X : 1개의 example
+training dataset D : instance의 집합
+hypotheses H : 가설 ex)해만뜨면 - yes
+여러개의 hypotheses가 가능
+target function C : 우리가 목표로 하는 함수 h를 정확한 c로 만들어 주는 것
+
+x1, x2, x3 인스턴스와 h1, h2, h3 가설이 있는데 서로 매핑 할 수 있다.
+specific할수록 인스턴스 포함범위가 적다.
+
+find-s algorithm
+모든 x 인스턴스중에서
+처음 가설은 모든 경우에 대해 no를 대답
+그 다음 yes된 인스턴스가 들어오면 해당 feature들은 허용해준다.
+중복된 feature오면 don't care로 바꿔준다.
+특정한 function을 만들어주는 과정이다.(convergence)
+
+find-s algorithm가 대부분 맞지만 모든 가설을 설명하지는 못함
+version space는 이 단점을 해결
+범위를 찾는 방법으로 바꿈
+general boundary G - 일반적인 vs
+specific boundary S - 세분화한 vs
+h : general한것보단 specific하고 specific한 것보단 general한 가설을 찾는 것
+candidate elimination algorithm
+바운더리를 점점 좁혀나가는 과정(전부 no, 전부 yes)
+positive면 specific -> generalize x를 커버할 수 있는 만큼만
+negative면 generalize -> specific
+            sunny, warm같은 경우 specific해줘도 됨
+            don't care는 specific해주면 안됨
+            같은 값을 갖고있는 wind, water도 안됨
+결국 나중에는 positive면 general specific 둘 다 만져주게 됨
+범위로 설정돼서 여러가지의 가설이 남게 됨
+
+이 가설들로 어떻게 분류 할 것인가.
+specific을 만족하면 yes
+general 만족하지 못하면 x
+specific을 만족하지 못하고 general을 만족하면 어떤 케이스냐라고 하는
+한계가 있기 때문에 잘 쓰이지 않음
+
+잘돌아가긴 하지만 완벽한 상황에서만 잘 돌아간다고 말할 수 있음
+하지만 현실은
+노이즈 발생, 정확히 맞는 가설이 노이즈에 의해 제거될 수 있음

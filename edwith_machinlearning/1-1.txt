@@ -1,0 +1,35 @@
+동기유발
+데이터가 많이 축적 되고 처리 할 수 있는 능력이 생김
+텍스트 데이터, 네트워크 데이터, 타임스 데이터, 이미지 데이터 등
+
+document classfication
+stock market prediction
+platnum recognition
+sns recommendation
+helicopter control
+
+스팸필터링
+
+천안함 블로그정보를 모아 어떤 이벤트에서 어떤 생각을 갖고 있는지
+요약해서 파악 할 수 있다
+
+주식시장도 내일의 주가지수를 파악하는데 예측
+swiss - dow존스 negative correlated
+
+머신러닝의 종류들
+1. 슈퍼바이즈드 러닝 - 알아맞추기
+2. 언슈퍼바이즈드 러닝 - 요약, 정리, 대표, 군집
+3. 리인포스 러닝 - 어떤 것이 더 지능적인 행동인가, 원하는 로봇의 행동 계획
+
+supervised learning
+정답을 알려주는 데이터가 있음
+이런 것들은 찾고 이런 것들은 찾지 말라는 가이드가 있음.
+ex) 스팸필터링, 자동 성적, 자동 카테고리
+클래스피케이션(ranking, hit or miss) or 리그레션(prediction value)
+
+
+unsupervised learning
+true밸류가 없다.
+군집 찾기, 잠재적 현상 이유를 찾기
+ex) 신문기사 10개 요약, 얼굴의 잠재적 이미지, 교통체증에 원초적 이유
+노이즈 필터링 or 클러스터링

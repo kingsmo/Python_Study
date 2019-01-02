@@ -1,0 +1,18 @@
+decision tree
+
+현실세계에는 inconsistent한 데이터가 발생
+
+각 피쳐마다 트리를 만들 수 있다.
+hypothesis -> decision tree
+
+http://archive.ics.uci.edu/ml/datasets/Credit+Approval
+벤치마크 셋들을 확인할 수 있다.
+15개의 속성이 코드로 매핑되어 있음
+
+머신러닝은 도메인에 무관하게 접근할 수 있음
+
+
+A1특성으로만 구분 vs A9특성으로만 구분
+?는 데이터가 없었다.
+어떤 특성을 보느냐에 따라 성능이 많이 달라질 것임
+하나의 특성만 보는 경우는 거의 없음

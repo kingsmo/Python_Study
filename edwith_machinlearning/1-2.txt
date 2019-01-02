@@ -1,0 +1,46 @@
+확률
+
+압정을 던져서 앞으로 떨어지냐 뒤로 떨어지냐 (도박)
+동전과 살짝 다름
+
+어떻게 이 확률을 예측할 것인가?
+총 5번중 2번 head 3번 tail
+
+binomial distribution
+discrete probability distribution(이산적인 확률 분포)
+두가지 경우만 있기 때문에 binomial
+bernoulli experiment라고도 불림
+서로 독립된 사건
+동일한 확률 분포를 가진다는 두가지 가정을 깔고 감
+
+P(H) = 0,  P(T) = 1 - 0
+P(HHTHT) = theta^3(1 - theta)^2
+P(D|theta) = theta^3(1 - theta)^2
+어떻게 하면 이 가정상황이 강해져서 참이라고 말해줄 수 있을까
+세타를 따른다는 가정하에 가장 정확한 세타를 찾는 것
+
+maximum likelihood estimation (MLE)
+THETA_hash = argmax P(D|theta)
+
+이러한 지수승들은 부하가 너무 커진다.
+그래서 로그함수를 써서 매핑시킨다.
+THETA_hash = argmax log P(D|theta)
+
+이것을 어떻게 최대화를 찾냐!
+세타에 대해 미분을 해라
+theta = theta(h)
+        theta(h) + theta(r)
+
+50번중 30번 20번이여도 0.6인데 같은 값이냐
+추론을 한것이지 정확한 파라미터가 아니다.
+우리가 추론한 세타와 실제 값을 뺀값이 에러보다 클 확률?
+에러 바운드가 커지면 커질수록 이 값은 작아짐?
+시도 횟수(N)가 커질수록 에러가 더 적을 것이다.
+
+N을 많이 늘려 0.01%의 에러를 가진 것을 만들 수 있다.
+
+이것이 Probably Approximate Correct(PAC) learning
+Probably 아마도 요 확률 범위 내에서는
+Approximatele 에러 바운드
+시도횟수에 따라 에러 바운드가 달라짐!! 이것이 중요
+probably 랑 Approximate는 주어지는거임 trial개수를 구하는 것

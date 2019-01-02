@@ -1,0 +1,33 @@
+linear regression
+
+통계적 접근은 어떠냐
+
+housing data
+13개의 independent 속성 -> 1개의 dependent한 밸류
+
+어떻게 approximated function을 만들 것이냐
+
+decision tree <-> hypothesis
+
+hypothesis정의
+linear는 건드리지 않고 theta만 건드릴 것임
+
+x0 = 1이기때문에  theta0 x0 + theta1 x1+ ... 가능
+f hat = X THETA로 매트릭스 표현 가능
+error는 적게하고 theta를 찾아야한다 Y를 잘 나타내는
+
+식 풀기
+실제값 - 추정값
+세타에 대해 정리
+세타에 대해 미분 - 세타가 최소화된 곳은 기울기가 0인곳
+
+실제 값은 빨간 값
+추정치는 파랑 y값
+
+attribute는 하나인데 x를 뻥튀기해서 곡선을 만드는 것이다
+
+디시전트리 노드의 높이를 높히는 것과 같은현상이다. 오버피팅 되는 것
+
+간단하고 쉽게 training할 수 있지만
+한계점은 데이터셋이 많아지면 많아질수록 모델이 억지스럽게 복잡해지고
+에러가 더 늘어날 것이다.
