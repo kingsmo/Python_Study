@@ -1,0 +1,28 @@
+logistic function
+
+sigmoid function
+bounded
+differentiable
+real function
+defined for all real inputs
+with positive derivative
+
+logistic function을
+역함수 형태로 만들면 logit function이다.
+
+왜 좋냐면 sigmoid function특징을 다 가지고 있고
+derivative를 계산하기 쉽다는 것은 optimization 방식을 쓰기가 편하다.
+
+logit function을 살펴보면
+x는 0 ~ 1 사이이고 f(x)는 P(Y) likelihood값을 나타내고 있다.
+
+x가 p고 y가 x이다.
+x = log(  p
+        1 - p)    -> ax + b -> X theta
+
+logistic한 모양을 활용한 regression이다.
+
+logistic regression은 확률적 classfier이다.
+P(y = 1|x) logistic function이 되는 것이다.
+x와 y가 전부다 주어져도 theta값을 모른다.
+이 theta를 배우는 과정이 중요해지는 것이다.

@@ -1,0 +1,14 @@
+logistic regression
+mle에서 theta
+
+mcle : maximum conditional likelihood estimation
+x가 condition
+n은 instance의 개수
+이것도 log취함
+
+logistic regression을 써야겠다고 판단하면
+어떻게 theta를 제대로 구할 지를 생각해봐야 한다.
+
+그다음에 theat에 대해 미분을 해라
+하지만 더이상 미분 할 수 없는 구조라
+정확한 theta값이 아니라 approximation을 해야한다

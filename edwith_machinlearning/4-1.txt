@@ -1,0 +1,30 @@
+logistic regression
+
+naive bayes의 문제점 : naive assuption적용
+
+linear regression의 정의
+bayes에서는 risk 자체가 없어지지 않음
+
+descision boundary(x mid) 근처에서 likelihood가 급격하게 변하게 되아
+s커브(sigmoid function)이 좋은 형태이다.
+
+그러면 어떤 형태로 만들어야 sigmoid형태가 될것인가.
+
+class variable은 discrete함
+attribute A15는 cotinious한 value이다.
+log를 취한다는 자체가 급격하게 변하는 값을 linear 하게 볼 수 있다.
+그렇게 되면 조금더 구분이 잘 되고 a15와 class간의 관계를 쉽게 보여진다.
+
+a15의 어떤 선을 그어줘야 좋은 descision boundary가 되냐
+피팅을 하는 방법
+1. linear
+우상향그래프로 그려짐
+직선그래프
+
+2. logistic
+s커브로 그려지고 o 과 1사이로 매핑
+linear function에 log를 취하면
+0.5가 지나가는 부분이 달라진다.
+logistic한 게 더 정확할거임
+linear한 것만 하게되면 credit 못받은거는 잘 예측하지만 받은 것은 잘 예측
+결론은 에러나오는 부분이 줄어든다.

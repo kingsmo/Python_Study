@@ -1,0 +1,45 @@
+머신러닝은 데이터로부터 학습하도록 컴퓨터를 프로그래밍하는 과학입니다.
+
+스팸필터
+훈련세트 : training set
+샘플 : training instance
+훈련데이터  : training data
+정확도 : accuracy
+
+왜 머신러닝을 사용하는가?
+유지보수가 힘들어진다.
+머신러닝같은 경우는 자동으로 변화에 적응한다.
+대용량의 데이터를 분석하면 겉으로는 보이지 않던 패턴을 발견할 수 있다 - 데이터 마이닝
+
+지도학습
+레이블이라는 원하는 답이 있다.
+분류가 전형적인 지도 학습 작업
+예측변수라 부르는 특성을 사용해 타깃 수치를 예측하는 것 - 회귀 분석
+
+ex)
+k-nearest-neighbors
+linear regression
+logistic regression
+support vector machine
+decision tree and random forests
+neural networks
+
+비지도 학습
+훈련데이터에 레이블이 없다.
+
+ex)
+clusterting
+- k - means
+- hierarchical cluter analysis
+- expectation maximization
+visualization dimensionality reduction
+- principal component analysis
+- kernal
+- locally linear embedding
+- t-distributed stochastic neighbor embedding
+association rule learning
+- apriori
+- eclat
+
+블로그 방문자들을 그룹화 하는 것
+시각화, 이상치 탐지,
