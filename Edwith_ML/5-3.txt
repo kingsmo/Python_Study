@@ -1,0 +1,18 @@
+svm with matlab
+
+w라는 벡터를 만들어서 quadprob(optimization)
+선의 방향을 정한다.
+
+점들의 margin을 정해서 선을 그을 수 있을 것이다.
+
+feasible solution : 옵티미제이션하면 해가 나옴
+unfeasible은 안나옴
+빨간점과 파란점이 혼재할 때
+
+사실은 unfeasible한 경우가 많다.
+
+hard margin svm 어떠한 에러도 허락하지 않는 것이다.
+현실에서는 에러를 조금이라도 포함해야한다.
+
+soft margin svm 에러를 조금은 허락하겠다.
+decision boundary가 선형으로 가야한다.

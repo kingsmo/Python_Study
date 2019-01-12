@@ -1,0 +1,32 @@
+error handling in svm
+
+디시전 바운더리를 서포팅하고있는 벡터들을 찾아내서
+그것을 기반으로 디시전 바운더리를 만들어 낸 것이다.
+
+linear하지 않을 때 어떻게 하는것이 좋을까?
+soft-margin과 penalization 해결
+
+non-linear한 방식 vs 벡터 버리는 방식 vs 떨어진 거리만큼 penalization주기
+그 방법 중에서 penalization방법
+
+건수가 패널티의 정보 : C
+c로 에러가 있거나 없거나를 알려주는 상수
+optimization할려는 함수에 C를
+
+a 가 1일때가 decision 바운더리를 만들기 시작하는 지점이다.
+로스가 전혀없다가 decision boundary를 넘어가는 순간 0-1loss가 생긴다.
+이게 건수로 따지는 거다.
+일직선으로 내려가다가 에러개수만큼 튄다.
+쿼드레틱 프로그램이으로 정의하기 어렵다.
+저 멀리 있는 점도 가까이 있는 점도 동일한 penalty가 주어지기 때문이다.
+
+그래서 hinge loss 퍼션을 주겠다
+
+멀리 갈수록 penalty가 커짐 \__모양이다.
+slack varaiable로 관리
+summation이 미니멈 돠도록 관리
+decision boundary의 벡터를 정의할 때 영향을 끼침
+slack varaiable을 어떻게 정의 하냐...
+일부 j에서는 슬랙만큼 -될 수 있다.
+
+C를 정의해줘야 되는 문제가 생김
