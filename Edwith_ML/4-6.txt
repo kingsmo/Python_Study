@@ -1,0 +1,17 @@
+logistic regression parameter approximation
+
+개별 theta에 대해 편미분
+logistic regression은
+gradient ascent를 해야함
+
+logistic regression에서 나온 식을
+gradient ascent에 넣음
+맨 처음 포인트는 임의적으로 넣음
+
+linear regression
+x에 대한 feature 사이즈가 너무 크면
+inverse가 안됨
+y값 개수도 많으면 multiplication안됨
+아주 큰 데이터를 다룰 때는 approximation을 하는 것이다
+
+linear regression에서도 gradient descent를 쓰자

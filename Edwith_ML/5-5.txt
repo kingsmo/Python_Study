@@ -1,0 +1,17 @@
+SoftMargin SVM
+
+slack variable이 점점 커진다 margin에서 멀어질수록
+hard는 infeasible하는 경우가 생김
+constraint를 줌으로써 소프트하게 만듬
+
+넘어간 정도가 알아서 패널티 되니까 알아서 모델링 해라.
+
+c를 어떻게 결정하느냐에 따라 성능이 많이 달라질 것이다.
+hinge loss
+
+logistic function : Log Loss 펑션을 쓴다.(파란색)
+
+log loss가 무조건 좋아보이지만
+svm은 완전히 갈리는 상황을 가정하니까
+log loss가 안전한 곳에 있을지라도 패널티를 주고 있는 문제가 있다.
+급격한 패널티를 주기위한 loss function이다.

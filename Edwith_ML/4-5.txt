@@ -1,0 +1,12 @@
+gradient descent
+
+rosenbrock function
+편미분해서  (1, 1)일 때 0
+이러한 전개 말고
+
+approximation을 통해서 찾을 수 없을까
+초기 포인트 설정하고
+아까 정의한 deivative 함수들 적용하면된다.
+방향은 맞게 갈 것이다.
+반복을 많이 주거나 h 크게 주면 된다.
+하지만 h를 크게 주면 gradien값에 큰 영향을 끼치게 된다.

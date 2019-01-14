@@ -1,0 +1,32 @@
+logistic function
+logistic regression classfier 배움
+
+theta를 approximation하는 과정
+gradient descent이다.
+
+taylor expansion
+하나의 펑션에 대한 표현
+텀들의 유한한 합이라 생각하자
+
+exponential function을 미분하면
+그대로이다.
+식을 풀어 무한대로 가게되면 점점 동일한 함수가 된다.
+
+f(x)라는 function이 주어져 있음
+x1 첫번째 값
+반복적으로 이 첫번째 점을 옮긴다. lower / higher 될 수 있도록
+이동에는 방향과 양이 필요하다.
+gradient descent는 방향 양을 알아내는 과정
+방향이 훨씬 중요! 속도는 사람이 제어하도록 놔둠
+
+빅오노테이션을 사용하고
+u는 unit vector로 direction을 의미한다.
+h는 속력
+이 u를 어떻게 잘 정할수 있을까?
+h를 매우 작게 금방 만들 수 있기 때문에 고려하지 않는다.
+argmin u 최소화 되는 u
+
+절대값을 씌워 unit vector를 의미
+gradient의 반대방향으로 이동하게 만들어서 점점 줄여지게 만듬
+
+gradient ascent는 -부호만 바꿔주면 된다.

@@ -1,0 +1,21 @@
+maximizing margin
+f(x) = w x + b = 0
+f(x) > 0이라고 가정
+
+xp 에서 w의 방향으로 r만큼 진행된 점 x
+x = xp + r  w
+          ||w||
+f(xp) = 0
+
+f(x) = w(xp + r  w
+               ||w||)   +  b
+= r||w||
+= a
+r =  a
+   ||w||
+
+w를 아는것이 중요
+어떻게 optimize할까?
+margin distance를 최소화하는 것이 w를 아는 것
+
+quadratic optimization을 해야한다.

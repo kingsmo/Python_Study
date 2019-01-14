@@ -1,0 +1,28 @@
+Naive Bayes to Logistic Regression2
+
+가정의 정도와 파라미터의 변경등으로 인한 차이가 있다.
+
+naive bayes classfier
+naive assumption
+same variance assumption
+gaussian distribution
+bernolli distribution
+estimate parameter counts
+2(클래스의 갯수) * 2(각 클래스마다 정해지는 평균 및 분산) * d(인풋데이터의 featurer 개수) + 1
+= 4d +1
+
+로지스틱 리그레션
+estimate parameter counts - d + 1
+
+당연히 로지스틱 리그레션이 좋아보인다.
+나이브 베이즈는 사전정보를 추가할 수 있었다.
+어떤 모델을 적용할 지 결정을 내릴 때 여태까지 배운 정보를 알아야 한다.
+
+generative - discriminative pair
+generative
+full probabilisitic model
+bayesian, prior, modeling joint probability
+
+discriminative
+esmate the marameter of P(Y|X)
+conditional probability
