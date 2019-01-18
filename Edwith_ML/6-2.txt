@@ -1,0 +1,16 @@
+Bias ans Variance
+
+에러에 대해 이해를 먼저하자
+두가지 approximation and generalization
+approximation + 오메가
+오메가는 앞으로 올 제너럴한 부분에 대한 에러
+
+f : target function
+g : the learning function of ML
+g(d) : 데이터셋을 적용시킨 ml model
+D : 데이터 셋
+g햇 : averave hypothesis
+    매번 데이터가 샘플링 할 때마다 평균으로 만든 것이다,
+
+들어올 수 있는 expectation
+expected error

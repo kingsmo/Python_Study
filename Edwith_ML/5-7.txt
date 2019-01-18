@@ -1,0 +1,15 @@
+primal and dual with kkt condition
+
+strong duality는 듀얼펑션에서 나온 솔루션과
+원래 있던 primal솔루션이 같게끔 만들어주는 것이다.
+
+kkt condition을 만족해야 한다.
+너무 어려운 부분............. 알아서 공부하시오........
+
+kkt와 strong duality가 만족된다 가정하고
+
+primal -> dual problem -> kkt condition
+점차 알파에 대해 푸는 문제가 되어간다.
+quadratic programming 하는 것이다.
+
+식을 다 풀고 이것이 왜 primal보다 좋은지 판단하는 시간.

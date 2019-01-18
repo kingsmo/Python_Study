@@ -1,0 +1,19 @@
+Kernel
+
+2차원에서 분리 안되던 것들이
+3차원에서는 lineary seperable하게 변했다.
+이렇게 interaction을 계속하는 것은 좋지 않다.
+feature space가 너무 커지기 때문에
+
+그래서 kernel function을 씀
+inner product
+
+(xㆍz)^n차 까지 내적할 수 있는 것이다.
+
+x와 z를 먼저 내적해서 3차로 하는 것이나
+x와 z를 3차로 보내서 내적하는 것이나 같다고 보는 것이
+커널펑션의 특징
+전자가 더 좋다.
+
+내적한 값에 대해서 n차 하면 되는 것이다.
+infinite한 차원에서 표현하고자 하는 것이 커널트릭이다!

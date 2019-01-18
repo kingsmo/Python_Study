@@ -1,0 +1,39 @@
+Over fitting and Under fitting
+
+성능에 대한 검증이 필요하다.
+
+bias and variance의 컨셉
+
+classfication방식 배움
+naive bayes
+logistic regression
+suppot vector machine
+SVM이 보통 사용된다.
+
+정확한 predict result가 나온다.
+정확성만 말하는 것이 옳은 성능 측정이 아니다.
+
+제대로 된 클레임
+validity of accuracy
+다른 퍼포먼스도 측정해야 한다. ex) precision/recall - f-measure
+데이터 셋의 정확성도 검증해봐야 한다.
+variance들이 큰지 얼마나 스팸들이 많은지.
+
+이러한 것들이 정확한 식견이 필요하다.
+
+training and testing
+트레이닝에만 맞추는 디시전 바운더리가 옳지 않다.
+prior knowledge, past experiance에 영향을 받음
+데이터 분포가 변하지 않는다는 가정하에 모델링이 된다.
+만약에 바뀌면 새로 training해야한다 -> online 트레인
+도메인이 계속 변화거나 충분한 variance를 표현하지 못할때는
+나중에 상황을 보장할 수 없다.
+
+testing 셋을 따로 놔둬라.
+
+linear regression에서
+underfitting과 overfitting의 경우를 본다.
+이러한 경우를 어떻게 피할 수 있을까?
+
+complex model로 발전시키다가 중간에 멈춰야 한다.
+언제 멈춰야 되나?
