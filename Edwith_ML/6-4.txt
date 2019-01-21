@@ -1,0 +1,24 @@
+Cross Validation
+
+현실에서는 트루펑션을 알 도리가 없다.
+
+인피니트한 샘플링을 통해 hypothesis가 어떻게 변하는지 보는 것이다.
+
+인피니트한 샘플링이 안되지만 이것을 해보는 것이다.
+
+여러개의 데이터 셋들을 억지로 만들어 놓고 그것을 가지고
+인피니트한 것처럼 다루는 것이다.
+
+n-fold cross Validation
+데이터 셋이 하나인 상황 에서 n개의 exclusive subsets으로 나눔
+n - 1개는 트레이닝하고
+1개는 testing
+인피니트는 못하고 총 n번 하겠다는 것이다.
+
+Leave One Out Cross Validation
+총 데이터의 인스턴스 개수만큼 돌릴 수 있다.
+바로 average hypothesis를 구하고
+bias variance 를 구하고
+
+bias variance trade off를 통해서 인피니트 셋이 필요한 가정을 통해
+cross validation이 나온 것

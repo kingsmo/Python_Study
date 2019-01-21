@@ -1,0 +1,19 @@
+rethinkin of SVM
+
+kernel trick - non-linear function
+decision boundary를 complex하게 만드는 것
+
+linear한 바운더리는 데이터가 가진 특성을 잘 발휘 못하고 있음
+x1, x2 2차원으로 그릴 수 있지만 3차원까지 만들 수 있음
+무한대 차원까지 가능
+
+여기에 있는 프라이멀 문제를 dual문제로 바꿔야된다.
+옵티미제이션과 별개의 문제이다.
+
+constrained quadratic programming
+lagrange method를 활용
+라그랑쥐 멀티플라이어를 컨스트레인트 형식에 따라
+
+라그랑쥐 펑션에다가 미니멈 x면 라그랑쥐 듀얼 펑션이 된다.
+
+이 듀얼 펑션을 f(x)와 동일하게끔 동작하는 성질이 있음.
