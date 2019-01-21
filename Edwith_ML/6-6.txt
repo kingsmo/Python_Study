@@ -1,0 +1,33 @@
+Regularization
+
+있는 모델을 그대로 쓰면서 성능을 향상시키기
+
+데이터 인스턴스 들이 이상하게 샘플링 될 수도 있다.
+에러가 되게 커지는 경우
+
+퍼펙트한 핏을 포기하는 것이다.
+training accuracy는 줄어듬
+무한대 차원으로 모델을 컴플렉스하게 만들 수 있다.
+
+오버피팅을 하기위한 두가지 초이스
+simple한 모델을 쓰면 여전한 bias의 에러
+Regularization
+
+모델에서 오는 bias를 줄이기
+트레인 데이터에 대해 둔감하게 만들어 주는 것이
+Regularization의 에센스다.
+minimizing error from training set
+
+formal definition
+Regularization은 regression의 constraint로 말할 수 있다.
+
+w값이 커지거 되면
+
+l2 Regularization : ridge regression을 가장 많이 씀
+많은 파라미터에 대해서 많은 엘리먼트 들이 0이 될 수 있음
+
+l1 Regularization : lasso
+몇몇 피쳐에 대해서만 weight가 생기기 때문에 빠르게 대응 가능
+
+sparse한 파라미터 셋이 아닐경우 l2
+lidge는 미분이 쉽다.

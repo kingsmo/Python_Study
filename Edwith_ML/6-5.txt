@@ -1,0 +1,21 @@
+Perfomance Metrics
+
+퍼포먼스를 측정하는 다양한 방법
+Accuracy
+precision and recall
+f-measure
+ROC curve
+
+tp fn fp fn
+spam filter같은 경우는
+실제 스팸의 경우(TRUE)가 아닌데
+스팸인 경우가 절대 발생하면 안됨
+precision : tp / (tp + fp) 가 높아야 함
+
+recall : tp / (tp + fn) 과 precision은 트레이드 오프 관계
+예로는, 카드사에서 vip고객들에게 메일 보내기
+
+f-measure : precision recall 활용
+b값이 적으면 precision 크면 recall에 웨이팅
+
+cross validation하고 실제계산하는 measure 방법들을 알아본 것이다.

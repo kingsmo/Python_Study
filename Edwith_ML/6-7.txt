@@ -1,0 +1,22 @@
+Application of Regularization
+
+linear regression에 적용
+특정 coef가 커지게 되면 에러를 줄이는 노력이 없어지게끔
+Regularization이 붙어있다.
+
+w를 잘 선택해서 optimiztion하기 위함
+w에 대해 편미분을 함
+정규방정식식이 나옴
+
+람다가 클수록
+bias는 커지고
+variance는 작아짐 -> complex가 너무 적어짐
+
+적절한 람다값을 어떻게 찾아야 하냐?
+파라미터를 조정해가며 테스트해야 한다.
+
+logistic regression에서도 Regularization이 적용 가능하냐
+Regularization에서도 approximation을 해야한다
+
+svm에서 Regularization
+c값이 Regularization이 비슷한 역할을 한다.
