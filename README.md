@@ -1,4 +1,4 @@
-# 2018 Python Study
+# Python Study
 ## 국민대학교 이성재 / 최승호 / 김선필 / 우현웅
 
 ### 1. python 기초 문법 + 알고리즘
