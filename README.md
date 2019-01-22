@@ -1,5 +1,5 @@
 # 2018 Python Study
-## 국민대학교 이성재 / 최승호 / 김선필 / 우현웅 / 박준현
+## 국민대학교 이성재 / 최승호 / 김선필 / 우현웅
 
 ### 1. python 기초 문법 + 알고리즘
 #### 파이썬 프로그래머스 강의 - https://programmers.co.kr/learn/courses/2
@@ -21,7 +21,21 @@
 
 <br>
 
-### 4. 머신러닝 / 딥러닝 이론 및 ensorflow 실습
+### 4. 머신러닝 / 딥러닝 이론 및 tensorflow 실습
 #### 홍콩과기대 김성훈 교수님 강의 - http://hunkim.github.io/ml/
-#### 머신러닝 기초 닦기에 좋은 강의 - 현재 진행중
+#### 머신러닝 기초 닦기에 좋은 강의 - 현재 딥러닝 진행중
+
+<br>
+
+### 5. 머신러닝 이론 -Edwith
+#### edwith - 카이스트 문일철 교수님 인공지능 및 기계학습 개론 강의
+#### https://www.edwith.org/machinelearning1_17/joinLectures/9738
+#### 머신러닝 알고리즘들의 개념과 수식을 해석하고 풀어주는 강의다.
+
+<br>
+
+### 6. Hands On MachineLearning with Scikit-Learn&TensorFlow
+#### 핸즈온 머신러닝 책
+#### 배운 이론들을 실습예제에 활용할 수 있음.
+#### scikit learn, python 라이브러리, tesorflow 등 도구 활용도 증진을 위함
 
