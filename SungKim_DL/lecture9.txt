@@ -1,0 +1,40 @@
+XOR문제
+
+1
+뉴럴 네트워크를 가지고 어떻게 풀 수 있는지 살펴 보겠다.
+하나의 logistic regression으로는 못 풀고
+여러개를 합치면 된다.
+
+2
+XOR using NeuralNet
+일단 weight와 bias가 주어졌다고 생각
+y1, y2각각 구하고 y1 y2를 인풋으로 넣어 y햇 구하기
+
+3
+foward propagation
+다른 w와 bias를 찾을 수 있냐?
+숙제!
+
+4
+weight과 bias를 매트릭스와 벡터로 만들어주기
+
+5
+k(x) = sigmoid(XWi+ Bi)
+Y햇 = H(x) = sigmoid(k(x)W + B)
+이제 이 W와 B를 구하는 과정을 배울 것임
+
+6
+어떻게 w와 b를 구할 수 있냐?
+그레디언트 디센트를 적용하기 위해선 미분값을 적용해야함
+하지만 이것은 nn으로 가면서 복잡해짐
+
+7
+backpropagation 알고리즘으로 해결
+error = cost를 뒤에서부터 앞으로 보냄
+
+8
+f = wx + b
+g = wx
+f = g + b
+w, x, b가 f에 미치는 영향
+이것을 미분 값으로 알아야 한다.
