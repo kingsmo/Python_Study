@@ -1,0 +1,53 @@
+10 - 1 ReLU
+
+nn에서 적용되는 함수들을 네트워크에서는 activation function이라고 부름
+
+[입력, 출력]의 쌍으로 쌓아주면 문제 없다.
+bias는 출력의 값으로 채워주면 된다.
+
+맨 앞을 input layer 마지막을 output layer
+중간에 있는 것들을 hidden layer라고 부름
+
+layer가 많아도 왜 accuracy가 0.5가 나오냐?
+backpropagation이 2단 3단정도는 학습이 잘된다.
+sigmoid게이트를 통과하면 0 ~ 1사이고
+0.0x가 계속 곱해져서 -> 0에 가까운 숫자가 됨
+이 것을 Vanishing gradient라고 말함
+결과와 멀어질수록 영향이 덜해짐
+2006년까지 침체기
+
+ReLU : Rectified Linear Unit
+x가 0보다 작을땐 버리고 0보다 같거나 클때는 _/ 이러한 함수 적용
+max(0, x)
+시그모이드 대신 적용하면 된다.
+그래도 마지막 단계에서는 sigmoid를 쓴다. 0~1사이로 매핑하기 위해
+
+leaky ReLU : max(0.1x, x)
+ELU, Maxout도 ReLu를 조금씩 변형한 형태이다.
+
+sigmoid를 극복하기 위한 것이 -> tanh -1 ~ 1사이의 값
+
+
+10 - 2 initialize weight
+
+초기값 설정이 중요하다.
+weight를 다 0으로 주면 gradient가 사라지는 문제가 생김
+Restricted Boatman Machine(RBM)을 사용하여 초기화 시킨것을 Deep Belief Network
+recreate input - forward와 backward로 받은 값을 비교 w와 b는 그대로 적용
+이 차가 최소화 되도록 w를 조정
+인코더 디코더라고도 부름
+
+pre-training
+두쌍씩 처음부터 w b를 구해가는 과정
+이것을 초기화 값으로 사용
+fine tuning
+X데이터와 label이 있으면 빠른 학습이 적용이 됨
+
+rbm을 더 간단하게
+Xavier initialization
+입력과 출력에 비례해서 w, b를 초기화
+W = np.random.randn(fan_in, fan_out)/np.sqrt(fan_in)
+W = np.random.randn(fan_in, fan_out)/np.sqrt(fan_in/2)
+
+아직 정답은 없음
+여러가지 방법으로 실행시키는 것이 최선
