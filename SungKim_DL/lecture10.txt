@@ -52,45 +52,37 @@ W = np.random.randn(fan_in, fan_out)/np.sqrt(fan_in/2)
 
 아직 정답은 없음
 여러가지 방법으로 실행시키는 것이 최선
-=======
-XOR문제
 
-1
-뉴럴 네트워크를 가지고 어떻게 풀 수 있는지 살펴 보겠다.
-하나의 logistic regression으로는 못 풀고
-여러개를 합치면 된다.
 
-2
-XOR using NeuralNet
-일단 weight와 bias가 주어졌다고 생각
-y1, y2각각 구하고 y1 y2를 인풋으로 넣어 y햇 구하기
+10 - 3 drop out 과 model 앙상블
 
-3
-foward propagation
-다른 w와 bias를 찾을 수 있냐?
-숙제!
+오버피팅
+layer가 많아질수록 train 데이터에 대해서는 error가 줄어들음
+test는 error가 줄어들다 어느 순간 늘어남 이 순간부터 오버피팅이라고 함
 
-4
-weight과 bias를 매트릭스와 벡터로 만들어주기
+1. 트레이닝 데이터 더 많이
+2. 피쳐 숫자 줄이기 - 머신러닝만 해당
+3. regularization
 
-5
-k(x) = sigmoid(XWi+ Bi)
-Y햇 = H(x) = sigmoid(k(x)W + B)
-이제 이 W와 B를 구하는 과정을 배울 것임
+3 - 1 regularization strangth로 L2로 주기
+3 - 2 dropout 학습할 때 임의로 몇개 노드를 죽이기
+randomly set some neurons to zero in the forward pass
+이게 왜 되냐면 몇개만 쉬고 전체로 예측하게 하기 때문이다.
 
-6
-어떻게 w와 b를 구할 수 있냐?
-그레디언트 디센트를 적용하기 위해선 미분값을 적용해야함
-하지만 이것은 nn으로 가면서 복잡해짐
+보통 dropout은 0.5로 주고 이것은 학습시킬때만 쓰인다.
+train <-> evaluation
 
-7
-backpropagation 알고리즘으로 해결
-error = cost를 뒤에서부터 앞으로 보냄
+Ensemble?
+독립적으로 Neural Network를 만듬
+전부 학습 시킴 마지막에 각각 돌렸던 것들을 다 합침
+예를 들면, 전문가 여러명에게 물어보고 그 조언을 합치는 형식
 
-8
-f = wx + b
-g = wx
-f = g + b
-w, x, b가 f에 미치는 영향
-이것을 미분 값으로 알아야 한다.
->>>>>>> 6aa7b02cb92aca11dd90e786d3eb0fad28faea74
+
+10 - 4 레고처럼 넷트웍 모듈 쌓기
+feedforward neural network
+
+fast forward 단계를 2개씩 뛰어넘어가면서 해도 된다.
+split & merge 입력을 나누어서 처리한 다음에 하나로 머지하는 경우 = convolutional network
+recurrent Network 뉴럴을 앞으로 말고 옆으로도 추가할 수 있음 = RNN
+
+여기서는 상상력을 발휘해서 레고 블록들을 자유롭게 조작해봐라!!
